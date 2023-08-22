@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Guess the number version 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /* random numbers 0 to 10*/
+            /* up to 3 trys*/
+            /* use function isRight()*/
+            /*use a function guee()*/
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * (max + 1));
+            }
+            const solution = getRandomInt(10)
+            console.log(solution)
+            function isRight (n){
+                return solution === n 
+            }
+            function guess(){
+                const number = prompt("entrez un chiffre : ")*1
+                return isRight(number)
+            }
+            for(i = 0; i < 3; i++){
+                if (guess()){
+                    console.log("you guess the number !")
+                    break
+                }
+                else if (i === 2){
+                    console.log("you  lost ")
+                }
+            }
+            /* Fares's version
+            let num_try = 3
+            let input
+            function rnum(max) {
+                max = 11
+                return Math.floor(Math.random() * max);
+            }
+            const num_guess = rnum()
+            function isRight(n){
+                    if (n === num_guess){
+                    console.log("Bravo vous avez devinez le nombre")
+                    num_try = 0
+                }
+                else{
+                    num_try--
+                    if (n > num_guess){
+                        console.log("moins")
+                    }
+                    else {
+                        console.log("plus")
+                    }
+                }
+                }
+            while (num_try > 0){
+                input = prompt("mettez votre chiffre : ") * 1
+                console.log(isRight(input))
+            }
+            */
+        </script>
+    </body>
+</html>

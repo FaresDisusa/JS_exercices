@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Calculatrice</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            const A = prompt("Donnez la valeur de A")
+            const B = prompt("Donnez la valeur de B")
+            const E = A * B
+            let signe
+            if (isNaN(E)){
+                console.log(`Opération impoosble les valeur ne sont des valeurs valable : ${A} x ${B}`)
+            }
+            else {
+                if (E >= 0){
+                    signe = "Positif"
+                }
+                else {
+                    signe = "Négatif"
+                }
+                console.log(`${A} x ${B} = ${E} = ${signe}`)
+            }
+        </script>
+    </body>
+</html>

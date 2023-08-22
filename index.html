@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Recommondation Film</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            const year = 2023
+            const birth = prompt("Quel est votre année de naissance ?")
+            const age = year - birth
+            if (age < 13 ){
+                console.log("On vous recommande de regarder barbie")
+            }
+            else if (age < 18){
+                console.log("On vous recommande de regarder matrix")
+            }
+            else if(age >= 18){
+                console.log("On vous recommande de regarder the evil within")
+            }
+            else{
+                console.log("Veuillez entrer un age valide")
+            }
+        </script>
+    </body>
+</html>

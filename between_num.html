@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Between Numbers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body> 
+        <h2>Version avec liste</h2>
+        <script>
+            const num = prompt("Entrez un nombre entre 0 et 10 : ") * 1 //bich yiwili el num int mch string
+            const list_num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+            if (isNaN(num)){ // ken el input string
+                console.log("Nombre invalide , veuillez entre un nombre valide : ")
+            }
+            else{
+                if(num<0 || num>10){
+                    console.log("veuillez entre un numéro entre 0 et 10")
+                }
+                else{ 
+                    for(let i = 0; i < num; i++ ) // i tibda 0 w kol mra nzidou nkabrou el i medemha as8ar min num
+                    console.log(list_num[i]) // nwariw el content mta3 el liste_num bi l'index 7seb el 3dad i
+                }
+            }
+        </script>
+        <h2>Version avec </h2>
+        <script>
+            let chiffre = prompt("entrez un nombre entre 0 et 10 : ")
+            if(chiffre<0 || chiffre>10){
+                    console.log("veuillez entre un numéro entre 0 et 10")
+                }
+            else{
+                for(let i = chiffre; i >= 0 ; i--){
+                    console.log(i)
+                }
+            }
+        </script>
+    </body>
+</html>
