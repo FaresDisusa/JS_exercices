@@ -7,16 +7,47 @@
     </head>
     <body>
         <script>
+            //corrigé :
+            function isPremier(n){
+                if(n < 2){
+                    return false
+                }
+                    for(let i = n - 1; i > 1; i--){
+                        if(n % i  === 0){
+                            return false
+                        }
+                    }
+                return true
+            }
+            const number = prompt("Donnez un nombre : ")*1
+            console.log(`${number} est `, isPremier(number))
+            // ma version , ps : bug sur le else if qui crée une boucle infini
+            /*
             function calcHypotenuse(n) { // calcule d'une racine carré
                 return Math.sqrt(n);
             }
-            function isPrime(){
-                x = prompt("Donnez un nombre") * 1
-                number = calcHypotenuse(x)
+            function isPrime(number){
+                 const hyp_num = calcHypotenuse(number)
+                 let calc_num = Math.floor(hyp_num)
+                if (number % calc_num === 0 && calc_num != 1 || number <= 1){
+                    console.log(`Le nombre ${number} n'est pas entier`)
+                    return true
+                }
+                else if(number % calc_num != 0 && calc_num > 1 ){
+                    calc_num - 1
+                    console.log(calc_num)
+                    return false
+                }
+                else {
+                    console.log(`Le nombre ${number} est entier`)
+                    return true
+                }
             }
-            while (div_num > 1) {
-
+            input = prompt ("Entrez un nombre : ")* 1
+            while (isPrime(input)=== false){
+                calcule = isPrime(input) 
             }
+            */
         </script>
     </body>
 </html>
