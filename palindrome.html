@@ -13,9 +13,36 @@
             3- Array.prototype.reverse() : reverse la list
             4- Array.prototype.join() : pour transformer une list en string
             */
-           let word = prompt("Donner un mot :")
-           word = word.toUpperCase();
-           console.log(word)
+           //corrigé :
+
+           function polindrome(word){
+                const reversedword = word
+                .split('')
+                .reverse()
+                .join('') // possibilité d'écrire tout ces fonctions en une seul ligne de code
+                return word.toUpperCase() === reversedword.toUpperCase()
+           }
+
+
+            //ma version :
+
+            function isPolindrome(word){
+               word = word.toUpperCase();
+               let list_carc = word.split('')
+               list_carc = list_carc.reverse()
+               const rev_word = list_carc.join('')
+               if (rev_word === word ){
+                    return true
+                }
+                return false
+            }
+            const input = prompt("Donner un mot :")
+            if(isPolindrome(input)){
+                console.log(`${input} est un polindrome`)
+            }
+            else{
+                console.log(`${input} n'est pas un polindrome`)
+            }
         </script>
     </body>
 </html>

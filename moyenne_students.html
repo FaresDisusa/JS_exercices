@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Recommondation Film</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            //lenght --> pour savoir combien y'a de note
+
+            const students = [
+                {
+                    name: 'John',
+                    notes: [1, 20, 18, 19, 12]
+                },
+                {
+                    name: 'Jane',
+                    notes: [17, 18, 20, 13, 15]
+                },
+                {
+                    name: 'Sophie',
+                    notes: [17, 12, 14, 15, 13]
+                },
+                {
+                    name: 'Marc',
+                    notes: [2, 3, 5, 8, 9 ]
+                },
+                {
+                    name: 'Manon',
+                    notes: [18, 17, 18, 19, 12 ]
+                }
+            ] 
+            function calc_moyen(list_notes){
+                let total_notes = 0
+                for (let i = 0; i < list_notes.length; i++) {
+                    total_notes += list_notes[i];
+                }
+                division = list_notes.length
+                moyenne = total_notes / division
+                console.log(moyenne)
+            }
+            console.log(calc_moyen(students[1].notes))
+        </script>
+    </body>
+</html>
